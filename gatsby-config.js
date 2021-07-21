@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Documentation Starter',
     description:
       'Automatically generate docs for React components using MDX, react-docgen, and GatsbyJS',
-    siteUrl: '#',
+    // siteUrl: 'http://localhost:8000',
     sidebar: {
       pages: [
         {
@@ -14,6 +14,11 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-mdx`,
@@ -106,18 +111,18 @@ module.exports = {
     //     ],
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: '#',
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: '#',
+    //     // Puts tracking script in the head instead of the body
+    //     head: false,
+    //     // Setting this parameter is optional
+    //     anonymize: true,
+    //     // Setting this parameter is also optional
+    //     respectDNT: true,
+    //   },
+    // },
     `gatsby-transformer-react-docgen`,
     `gatsby-plugin-offline`,
   ],

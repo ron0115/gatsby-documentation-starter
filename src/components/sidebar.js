@@ -18,7 +18,7 @@ const Sidebar = ({ active, components, sidebarPages }) => (
     {components
       ? components.map(component => (
         <Link
-          to={`${component.node.frontmatter.menu.toLowerCase()}/${component.node.parent.name.toLowerCase()}`}
+          to={`/${component.node.frontmatter.menu.toLowerCase()}/${component.node.parent.name.toLowerCase()}`}
         >
           {capitalize(component.node.parent.name)}
         </Link>
